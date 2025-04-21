@@ -1,9 +1,9 @@
-import Card from "../UI/Card";
+import { Card } from "../UI";
 
 const WhyChooseUs = () => {
   return (
     <section className="p-8">
-      <h2 className="mb-10 text-4xl sm:text-6xl">Why Choose Us</h2>
+      <h2 className="mb-10 text-4xl sm:text-6xl dark:text-white">Why Choose Us</h2>
       <div className="h-[90vh] grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Card 1 */}
         <Card
@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
 
         {/* Card 2 (Morphed) */}
         <Card
-          y="-100px"
+          y="100px"
           duration={1.2}
           style="bg-gradient-to-br from-gray-800 to-gray-900 rounded-tl-[50px] rounded-br-[50px]"
           title="Sustainable Materials"

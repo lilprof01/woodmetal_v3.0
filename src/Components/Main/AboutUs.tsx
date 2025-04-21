@@ -17,7 +17,7 @@ const AboutUs = () => {
       <motion.h2
         animate={inView ? { opacity: 1, y: "0px" } : { opacity: 0, y: "200px" }}
         transition={{ duration: 1.5, ease: "easeInOut" }}
-        className="z-10 text-4xl sm:text-6xl"
+        className="z-10 text-4xl sm:text-6xl dark:text-white"
       >
         About Us
       </motion.h2>

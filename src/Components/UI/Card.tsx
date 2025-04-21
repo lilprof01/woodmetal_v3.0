@@ -19,7 +19,7 @@ const Card: React.FC<cardProps> = ({
   text,
 }) => {
   const targetRef = useRef(null);
-  const inView = useInView(targetRef, { once: false });
+  const inView = useInView(targetRef, { once: true });
   return (
     <motion.div
       ref={targetRef}

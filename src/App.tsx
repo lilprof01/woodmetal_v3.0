@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import "./App.css";
-import { useThemeStore } from "./Store";
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "./Pages/LandingPage";
+import { useThemeStore } from "./Store";
+import { LandingPage } from "./Pages";
 
 function App() {
   const theme = useThemeStore((state) => state.theme);
