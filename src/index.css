@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Delius&family=Major+Mono+Display&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-anonymous: 'Anonymous Pro', monospace;
+  --font-delius: 'Delius', serif;
+  --font-major-mono: 'Major Mono Display', monospace;
+}
+
+html, body{
+  scroll-behavior: smooth;
+}
+
+/* nav link animation */
+.nav-link {
+  position: relative;
+  padding: 10px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.nav-link::before{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+}
+
+.nav-link:hover::before{
+  animation: grow 0.3s ease-in-out forwards;
+}
+
+.nav-link:not(:hover)::before{
+  animation: shrink 2s ease-in-out forwards;
+}
+
+@keyframes grow{
+  0% {
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+@keyframes shrink{
+  0% {
+    width: 100%;
+  }
+  100%{
+    width: 0;
+  }
+}
+
+.bounce {
+  animation: slide 3s ease-in-out infinite;
+}
+
+@keyframes slide {
+  0%, 100%{
+    transform: translateY(-5px);
+  }
+  50%{
+    transform: translateY(0);
+  }
+}
